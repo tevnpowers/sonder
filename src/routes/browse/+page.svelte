@@ -4,9 +4,10 @@
 	import { posts } from '../../stores/posts';
 	import { v4 as uuidv4 } from 'uuid';
 
-	const example_post: Post = 	{
-		id: uuidv4(), // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+	const example_post: Post = {
+		id: '1', // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 		name: "The Rise and Fall of King Humpty",
+		author: "ChatGPT",
 		description: "It was all a dream: An alternative story of Humpty Dumpty",
 		genre: [Genre.Children],
 		connections: [ { id: mock_posts[0].id }],
@@ -28,7 +29,9 @@
 		<p>From that day forth, King Humpty ruled Egglantia with even greater compassion and wisdom. The nursery rhyme still echoed in the hearts of his people, but it was no longer a tale of tragedy. Instead, it became a testament to the resilience of their beloved king and the enduring power of love to mend even the most broken of souls.</p>
 		<p>And so, in the kingdom of Egglantia, the story of King Humpty lived on—a story of courage, redemption, and the triumph of the human spirit.</p>`,
 		access: Access.public,
-		published: true
+		published: true,
+		votes: 0,
+		score: 0
 	}
 </script>
 

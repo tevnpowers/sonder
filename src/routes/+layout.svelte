@@ -15,6 +15,7 @@
           <NavUl>
             <NavLi href="/">Home</NavLi>
             <NavLi href="/about">About</NavLi>
+            <NavLi href="/browse">Browse</NavLi>
             <NavLi href="/write">Write</NavLi>
           </NavUl>
         </NavContainer>

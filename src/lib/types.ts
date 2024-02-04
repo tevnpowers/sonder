@@ -1,12 +1,15 @@
 export interface Post {
 	id: string,
+	author: string,
 	name: string,
 	description: string,
 	genre: Genre[],
 	connections: Connection[],
 	html: string,
 	access: Access,
-	published: boolean
+	published: boolean,
+	votes: number,
+	score: number
 }
 
 export interface Connection {

@@ -3,8 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const mock_posts: Post[] = [
 	{
-		id: uuidv4(), // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+		id: '0',
 		name: "The Original Humpty Dumpty",
+		author: "Unknown",
 		description: "The story we all know and love.",
 		genre: [Genre.Children],
 		connections: [],
@@ -13,6 +14,8 @@ export const mock_posts: Post[] = [
 				<p>All the king's horses and all the king's men</p>
 				<p>Couldn't put humpty together again</p>`,
 		access: Access.public,
-		published: true
+		published: true,
+		votes: 0,
+		score: 0
 	}
 ]

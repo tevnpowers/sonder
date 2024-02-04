@@ -39,6 +39,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@friendofsvelte/tipex": "^0.0.1-prev.0.2",
 		"@tiptap/core": "^2.2.1",
 		"@tiptap/pm": "^2.2.1",
 		"@tiptap/starter-kit": "^2.2.1",

@@ -4,6 +4,8 @@
 	import StarterKit from "@tiptap/starter-kit";
 	import { Editor } from "@tiptap/core";
 	import { onMount } from "svelte";
+
+	let outlineClass = "outlined-button";
   
 	let element;
 	let editor;
@@ -56,112 +58,114 @@
 		<button
 		  on:click={() => console.log && editor.chain().focus().toggleBold().run()}
 		  disabled={!editor.can().chain().focus().toggleBold().run()}
-		  class={editor.isActive("bold") ? "is-active" : ""}
+		  class={editor.isActive("bold") ? "is-active " + outlineClass : outlineClass}
 		>
 		  bold
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleItalic().run()}
 		  disabled={!editor.can().chain().focus().toggleItalic().run()}
-		  class={editor.isActive("italic") ? "is-active" : ""}
+		  class={editor.isActive("italic") ? "is-active " + outlineClass : outlineClass}
 		>
 		  italic
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleStrike().run()}
 		  disabled={!editor.can().chain().focus().toggleStrike().run()}
-		  class={editor.isActive("strike") ? "is-active" : ""}
+		  class={editor.isActive("strike") ? "is-active " + outlineClass : outlineClass}
 		>
 		  strike
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleCode().run()}
 		  disabled={!editor.can().chain().focus().toggleCode().run()}
-		  class={editor.isActive("code") ? "is-active" : ""}
+		  class={editor.isActive("code") ? "is-active " + outlineClass : outlineClass}
 		>
 		  code
 		</button>
-		<button on:click={() => editor.chain().focus().unsetAllMarks().run()}> clear marks </button>
-		<button on:click={() => editor.chain().focus().clearNodes().run()}> clear nodes </button>
+		<button on:click={() => editor.chain().focus().unsetAllMarks().run()} class={outlineClass}> clear marks </button>
+		<button on:click={() => editor.chain().focus().clearNodes().run()} class={outlineClass}> clear nodes </button>
 		<button
 		  on:click={() => editor.chain().focus().setParagraph().run()}
-		  class={editor.isActive("paragraph") ? "is-active" : ""}
+		  class={editor.isActive("paragraph") ? "is-active " + outlineClass : outlineClass}
 		>
 		  paragraph
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-		  class={editor.isActive("heading", { level: 1 }) ? "is-active" : ""}
+		  class={editor.isActive("heading", { level: 1 }) ? "is-active " + outlineClass : outlineClass}
 		>
 		  h1
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-		  class={editor.isActive("heading", { level: 2 }) ? "is-active" : ""}
+		  class={editor.isActive("heading", { level: 2 }) ? "is-active " + outlineClass : outlineClass}
 		>
 		  h2
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-		  class={editor.isActive("heading", { level: 3 }) ? "is-active" : ""}
+		  class={editor.isActive("heading", { level: 3 }) ? "is-active " + outlineClass : outlineClass}
 		>
 		  h3
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
-		  class={editor.isActive("heading", { level: 4 }) ? "is-active" : ""}
+		  class={editor.isActive("heading", { level: 4 }) ? "is-active " + outlineClass : outlineClass}
 		>
 		  h4
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleHeading({ level: 5 }).run()}
-		  class={editor.isActive("heading", { level: 5 }) ? "is-active" : ""}
+		  class={editor.isActive("heading", { level: 5 }) ? "is-active " + outlineClass : outlineClass}
 		>
 		  h5
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}
-		  class={editor.isActive("heading", { level: 6 }) ? "is-active" : ""}
+		  class={editor.isActive("heading", { level: 6 }) ? "is-active " + outlineClass : outlineClass}
 		>
 		  h6
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleBulletList().run()}
-		  class={editor.isActive("bulletList") ? "is-active" : ""}
+		  class={editor.isActive("bulletList") ? "is-active " + outlineClass : outlineClass}
 		>
 		  bullet list
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleOrderedList().run()}
-		  class={editor.isActive("orderedList") ? "is-active" : ""}
+		  class={editor.isActive("orderedList") ? "is-active " + outlineClass : outlineClass}
 		>
 		  ordered list
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleCodeBlock().run()}
-		  class={editor.isActive("codeBlock") ? "is-active" : ""}
+		  class={editor.isActive("codeBlock") ? "is-active " + outlineClass : outlineClass}
 		>
 		  code block
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().toggleBlockquote().run()}
-		  class={editor.isActive("blockquote") ? "is-active" : ""}
+		  class={editor.isActive("blockquote") ? "is-active " + outlineClass : outlineClass}
 		>
 		  blockquote
 		</button>
-		<button on:click={() => editor.chain().focus().setHorizontalRule().run()}>
+		<button on:click={() => editor.chain().focus().setHorizontalRule().run()} class={outlineClass}>
 		  horizontal rule
 		</button>
-		<button on:click={() => editor.chain().focus().setHardBreak().run()}> hard break </button>
+		<button on:click={() => editor.chain().focus().setHardBreak().run()} class={outlineClass}> hard break </button>
 		<button
 		  on:click={() => editor.chain().focus().undo().run()}
 		  disabled={!editor.can().chain().focus().undo().run()}
+		  class={outlineClass}
 		>
 		  undo
 		</button>
 		<button
 		  on:click={() => editor.chain().focus().redo().run()}
 		  disabled={!editor.can().chain().focus().redo().run()}
+		  class={outlineClass}
 		>
 		  redo
 		</button>
@@ -169,3 +173,21 @@
 	</div>
   {/if}
   <div bind:this={element} />
+
+  <style>
+	/* Define your custom button styles */
+	.outlined-button {
+	  border: 1px solid #333; /* Set the border style */
+	  padding: 0.5rem 1rem; /* Adjust padding as needed */
+	  background-color: transparent; /* Make the background transparent */
+	  color: #333; /* Set the text color */
+	  font-weight: bold; /* Apply bold font weight */
+	  /* Add any other styling you'd like */
+	}
+  
+	/* Add styles for the active (pressed) state */
+	.outlined-button.is-active {
+	  background-color: #333;
+	  color: #fff;
+	}
+  </style>

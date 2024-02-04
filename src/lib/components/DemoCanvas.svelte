@@ -1,8 +1,4 @@
 <script lang="ts">
-	// TODO: Add to layout
-	import '../../styles/fonts.css';
-	import { onMount } from 'svelte';
-
 	export let step: number;
 </script>
 
@@ -31,6 +27,16 @@
 	h1, h4, p {
 		font-family: 'Open Sans';
 	}
+
+	h1 {
+		font-size: 26px;
+	}
+
+	h4 {
+		font-size: 22px;
+		margin-bottom: 1.2rem;
+	}
+
 	.canvas {
 		height: 100%;
 		width: 80%;
@@ -58,26 +64,28 @@
 	}
 
 	p {
-		font-size: 28px;
+		font-size: 20px;
 		text-align: left;
-		margin: 0.5rem;
+		margin: .25rem;
 	}
 
 	.body-text a {
-		text-decoration: none;
 		/* color: blue; */
 		color: inherit;
 		transition: all 0.5s;
 		pointer-events: none;
+		text-decoration: solid underline transparent 3px;
 	}
 
 	.body-text a.selected {
-		background-color: #B4D5FF; /* source: https://stackoverflow.com/questions/16094837/what-is-the-browser-default-background-color-when-selecting-text */
+		/* background-color:  #B4D5FF; */ /* source: https://stackoverflow.com/questions/16094837/what-is-the-browser-default-background-color-when-selecting-text */
+		border: 3px solid green;
+		border-radius: 0.5rem;
 	}
 
 	.body-text a.active {
-		color: blue;
 		pointer-events: all;
 		cursor: pointer;
+		text-decoration-color: green;
 	}
 </style>

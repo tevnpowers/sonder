@@ -41,6 +41,8 @@
 	"dependencies": {
 		"@tiptap/core": "^2.2.1",
 		"@tiptap/pm": "^2.2.1",
-		"@tiptap/starter-kit": "^2.2.1"
+		"@tiptap/starter-kit": "^2.2.1",
+		"@types/uuid": "^9.0.8",
+		"uuid": "^9.0.1"
 	}
 }
